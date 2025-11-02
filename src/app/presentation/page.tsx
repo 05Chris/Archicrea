@@ -1,5 +1,9 @@
-import Image from "next/image";
-import { Layout, PageHeader } from '@/components';
+import {
+  AnimatedCard,
+  FloatingElement,
+  Layout,
+  PageHeader
+} from '@/components';
 
 export default function Presentation() {
   return (
@@ -66,59 +70,32 @@ export default function Presentation() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 xl:gap-8">
-            <div className="relative group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg h-[300px]">
-                <Image
-                  src="/logement-image.svg"
-                  alt="Logements"
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute bottom-4 left-4 xl:bottom-6 xl:left-6">
-                  <div className="bg-[url('/md-clippath-blue.svg')] w-[126px] h-[58px] bg-no-repeat bg-contain pl-3 pt-5 xl:pt-2">
-                    <h3 className="text-white font-bold text-2xl xl:text-[32px] mb-2 text-nowrap">
-                    Logements
-                  </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <AnimatedCard
+              src="/logement-image.svg"
+              alt="Logements"
+              title="Logements"
+              badgeColor="blue"
+              delay={0.2}
+              direction="left"
+            />
 
-            <div className="relative group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg h-[300px]">
-                <Image
-                  src="/education-image.svg"
-                  alt="Education & culture"
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute bottom-4 left-4 xl:bottom-6 xl:left-6">
-                  <div className="bg-[url('/md-clippath-green.svg')] w-[126px] h-[58px] bg-no-repeat bg-cover pl-3 pt-5 xl:pt-2">
-                    <h3 className="text-white font-bold text-2xl xl:text-[32px] mb-2 text-nowrap">
-                      Education & culture
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <AnimatedCard
+              src="/education-image.svg"
+              alt="Education & culture"
+              title="Education & culture"
+              badgeColor="green"
+              delay={0.4}
+              direction="up"
+            />
 
-            <div className="relative group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg h-[300px]">
-                <Image
-                  src="/equipement-image.svg"
-                  alt="Équipements"
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute bottom-4 left-4 xl:bottom-6 xl:left-6">
-                  <div className="bg-[url('/md-clippath-orange.svg')] w-[126px] h-[58px] bg-no-repeat pl-3 pt-5 xl:pt-2">
-                    <h3 className="text-white font-bold text-2xl xl:text-[32px] mb-2 text-nowrap">
-                      Équipements
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <AnimatedCard
+              src="/equipement-image.svg"
+              alt="Équipements"
+              title="Équipements"
+              badgeColor="orange"
+              delay={0.6}
+              direction="right"
+            />
           </div>
         </section>
 
@@ -127,7 +104,9 @@ export default function Presentation() {
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_550px] xl:grid-cols-[1fr_750px] 2xl:grid-cols-[1fr_850px] items-center">
               <div className="hidden lg:block relative lg:h-full lg:w-full">
                 <div className="absolute bottom-0 right-8 xl:right-15 2xl:right-30 bg-[url('/archicrea-gold.svg')] bg-contain bg-center bg-no-repeat w-[400px] xl:w-[529px] h-[500px] xl:h-[788px]" />
-                <div className="absolute top-0 -right-10 bg-[url('/carine-kangou.svg')] bg-contain bg-center bg-no-repeat w-[400px] xl:w-[514px] h-[650px]" />
+                <FloatingElement>
+                  <div className="absolute top-0 -right-20 bg-[url('/carine-kangou.svg')] bg-contain bg-center bg-no-repeat w-[400px] xl:w-[514px] h-[650px]" />
+                </FloatingElement>
               </div>
 
               <div className="-space-y-2">

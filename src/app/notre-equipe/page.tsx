@@ -1,4 +1,4 @@
-import { Layout, PageHeader, StatCard, TeamMemberCard } from '@/components';
+import { Layout, PageHeader, StatCard, StaggeredGrid, AnimatedTeamMemberCard } from '@/components';
 import { teamMembers } from '@/data/teamMembers';
 
 const TeamMembers = () => {
@@ -8,9 +8,13 @@ const TeamMembers = () => {
         <PageHeader title="Notre équipe" />
 
         <section className="mt-12 border-b border-[#EDEDEE] pb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mx-auto max-w-6xl px-4">
+          <StaggeredGrid 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mx-auto max-w-6xl px-4"
+            staggerDelay={0.1}
+            animationDuration={0.6}
+          >
             {teamMembers.map((member) => (
-              <TeamMemberCard
+              <AnimatedTeamMemberCard
                 key={member.id}
                 name={member.name}
                 position={member.position}
@@ -18,7 +22,7 @@ const TeamMembers = () => {
                 alt={member.alt}
               />
             ))}
-          </div>
+          </StaggeredGrid>
         </section>
 
         <section className="py-20">
