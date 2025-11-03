@@ -8,7 +8,7 @@ export default function PageHeader({
   backgroundImage,
 }: PageHeaderProps) {
   return (
-    <div className={`containerClass relative z-30 flex justify-center items-center`}>
+    <div className={`containerClass relative z-10 flex justify-center items-center`}>
       {backgroundImage && (
         <div className={`absolute top-0 right-0 w-full h-full ${backgroundImage} bg-cover bg-bottom z-0`} />
       )}

@@ -30,11 +30,17 @@ export const AnimatedTeamMemberCard = ({
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <Image
+            {/* <Image
               src={image}
               alt={alt}
               fill
               className="object-cover"
+            /> */}
+            <div
+              className='bg-cover w-full h-full bg-no-repeat bg-center'
+              style={{
+                backgroundImage: `url('${image}')`,
+              }}
             />
           </motion.div>
           
