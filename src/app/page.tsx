@@ -161,7 +161,7 @@ export default function Home() {
             </SlideIn>
 
             <FadeInView delay={0.6}>
-              <div className="flex flex-col justify-between p-10 lg:p-20">
+              <div className="flex flex-col justify-between p-10 lg:p-20 h-[300px] lg:h-[474px]">
                 <div className="text-[#4E3D32] font-bold text-2xl lg:text-4xl xl:text-[45px] lg:leading-12">
                   Etudes <br />
                   Architecturales
@@ -177,7 +177,7 @@ export default function Home() {
             </FadeInView>
 
             <FadeInView delay={1.2}>
-              <div className="flex flex-col justify-between p-10 lg:p-20 pl-0">
+              <div className="flex flex-col justify-between p-10 lg:p-20 pl-0 h-[300px] lg:h-[474px]">
                 <div className="text-[#4E3D32] font-bold text-2xl lg:text-4xl xl:text-[45px] lg:leading-12">
                   Programmes <br />
                   immobiliers
