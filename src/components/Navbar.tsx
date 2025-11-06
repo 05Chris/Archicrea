@@ -13,7 +13,7 @@ export default function Navbar() {
     { href: "/notre-equipe", label: "Notre équipe" },
     { href: "/nos-prestations", label: "Nos prestations" },
     { href: "/nos-projets", label: "Nos projets" },
-    { href: "#", label: "Contact" },
+    { href: "/contact", label: "Contact" },
   ];
 
   const pathname = usePathname();
